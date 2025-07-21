@@ -101,9 +101,9 @@ public class MemoEditor : EditorWindow
             if(b_selectedIndex != selectedIndex)
             {
                 b_selectedIndex = selectedIndex;
-                if(isOpenFile)
+                workfilePath = Path.Combine(folderPath, fileList[selectedIndex]);
+                if (isOpenFile)
                 {
-                    workfilePath = Path.Combine(folderPath, fileList[selectedIndex]);
                     LoadFile();
                 }
             }
@@ -167,5 +167,4 @@ public class MemoEditor : EditorWindow
             EditorGUILayout.EndVertical();
         }
     }
-
 }
