@@ -12,7 +12,7 @@ public class GameInfo
 public class CategoryInfo
 {
     public int gameId;
-    public int categoryId;
+    public long categoryId;
     public string categoryName;
     public string categoryNotes;
 }
@@ -21,7 +21,7 @@ public class CategoryInfo
 public class StoryInfo
 {
     public int gameId;
-    public int categoryId;
+    public long categoryId;
     public int storyId;
     public string storyName;
     public string storyNotes;

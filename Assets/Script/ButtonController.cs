@@ -5,13 +5,13 @@ using UnityEngine.UI;
 public class ButtonController : MonoBehaviour
 {
     TextMeshProUGUI textMeshProUGUI;
-    private int id;
+    private long id;
     private GameMaster master;
 
-    public void Setup(string gettext,int getid,GameMaster getmaster)
+    public void Setup(string gettext,long getid,GameMaster getmaster)
     {
         GetComponent<Button>().onClick.AddListener(OnClick);
-        textMeshProUGUI = transform.Find("Text").GetComponent<TextMeshProUGUI>();
+        textMeshProUGUI = GetComponentInChildren<TextMeshProUGUI>();
 
         textMeshProUGUI.text = gettext;
         id = getid;
