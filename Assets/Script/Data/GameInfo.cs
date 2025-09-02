@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 [System.Serializable]
 public class GameInfo
 {
@@ -10,7 +12,7 @@ public class GameInfo
 public class CategoryInfo
 {
     public int gameId;
-    public int categoryId;
+    public long categoryId;
     public string categoryName;
     public string categoryNotes;
 }
@@ -19,7 +21,7 @@ public class CategoryInfo
 public class StoryInfo
 {
     public int gameId;
-    public int categoryId;
+    public long categoryId;
     public int storyId;
     public string storyName;
     public string storyNotes;
@@ -30,4 +32,22 @@ public class StoryInfo
 public class AplSettings
 {
     public string workPath;
+}
+
+[System.Serializable]
+public struct GameDataList
+{
+    public List<GameInfo> gameIds;
+}
+
+[System.Serializable]
+public struct CategoryDataList
+{
+    public List<CategoryInfo> categoryIds;
+}
+
+[System.Serializable]
+public struct StoryDataList
+{
+    public List<StoryInfo> storyIds;
 }
